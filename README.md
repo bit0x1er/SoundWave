@@ -19,7 +19,7 @@ This music player, **SoundWave**, is created by **Vinay Mahendre** for **educati
 
 ---
 
-##✨ Why No API?
+## ✨ Why No API?
 Using a local object to manage song data simplifies the setup and avoids the complexity of server requests. This approach works best for smaller-scale projects or demos like this one.
 
 ---
@@ -98,12 +98,6 @@ This project is for **educational and personal use only**. Here are some importa
 2. **Imaginary Visuals**: The characters and images associated with the songs are purely fictional and designed to complement the mood of the tracks.
 3. **Non-Commercial**: This project is not for any commercial use.
 4. **Usage Warning**: You are free to use this music player to listen to songs **only**. Any usage other than playing or listening songs as intended is strictly prohibited.
-
----
-
-## 🔔 Warning
-- This project is designed solely for **listening to songs and using the player as intended**.
-- Any misuse or unauthorized actions outside the intended purpose are strictly prohibited.
 
 ---
 
