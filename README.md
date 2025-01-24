@@ -13,6 +13,14 @@ This music player, **SoundWave**, is created by **Vinay Mahendre** for **educati
 - **Mood-Based Categories**: Songs are categorized based on moods to match how you're feeling.
 - **Imaginary Characters**: Each song comes with a unique visual—imaginary characters designed to align with the mood of the song.
 - **Custom Visualizations**: Includes a custom-built visualizer that syncs with the music being played, enhancing the listening experience.
+- **Static Data Handling**: All the song titles, paths, and related metadata are stored in an object within the code itself, without any reliance on external APIs or databases.
+- **No API Fetching**: This project avoids the use of fetch() or API calls. All assets (songs and images) are locally stored and directly referenced in the project.
+- **responsiveness**: This music player is responsive and compatible with all devices. There might be some minor bugs in responsiveness.
+
+---
+
+##✨ Why No API?
+Using a local object to manage song data simplifies the setup and avoids the complexity of server requests. This approach works best for smaller-scale projects or demos like this one.
 
 ---
 
@@ -43,6 +51,43 @@ This music player, **SoundWave**, is created by **Vinay Mahendre** for **educati
 |-- songsimg
 |-- index.html
 ```
+
+---
+
+## 📂 How It Works
+
+### Static Song Data:
+Songs are stored in a JavaScript object like this:
+
+```javascript
+const categories = {
+  Motivation: [
+    {
+      title: "Aarambh Hai Prachand X Polozhenie",
+      path: "songsimg/Motivation/1.png",
+      songpath: "songs/motivational-struggling phase/1.mp3",
+    },
+    {
+      title: "Aarambh Hai Prachand X NF's Hope",
+      path: "songsimg/Motivation/2.png",
+      songpath: "songs/motivational-struggling phase/2.mp3",
+    },
+  ],
+};
+```
+
+### Player Initialization:
+When a user selects a category, the relevant songs are dynamically loaded from this object, and their paths are used to play music.
+
+### Static Assets:
+All songs and images are pre-stored in the project directory (`songs/`, `img/` and `/songsimg` folders) and referenced directly.
+
+
+---
+
+## ❌ Disadvantages
+
+This project might have some bugs. If you encounter any issues, feel free to report me in issues section.
 
 ---
 
