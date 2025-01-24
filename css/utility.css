@@ -1,0 +1,89 @@
+/* Project: SoundWave Music Player
+  Author: Vinay Mahendre
+  Date: 2025
+  Description: A simple music player web app. */
+
+/* This is Utility file, just like - predefined CSS Properties */
+/* Code written by Vinay Mahendre */
+
+.border {
+  border: 2px solid rgb(255, 255, 255);
+  margin: 3px;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.bg-grey {
+  background-color: #121212;
+}
+
+.rounded {
+  border-radius: 7px;
+}
+
+.m-1 {
+  margin: 5px;
+}
+
+.m-11 {
+  margin-top: 10px;
+}
+/* Code written by Vinay Mahendre */
+.p-1 {
+  padding: 10px;
+}
+
+.space {
+  letter-spacing: 2px;
+}
+
+.theme-color {
+  background-color: #00fff7;
+}
+
+.butt-style:hover {
+  font-size: 1rem;
+  background-color: #353535;
+  color: white;
+  transition: all 0.1s ease-out;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #353535;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #151515;
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #000000;
+}
+/* Code written by Vinay Mahendre */

@@ -1,0 +1,2021 @@
+/* Project: SoundWave Music Player
+  Author: Vinay Mahendre
+  Date: 2025
+  Description: A simple music player web app. */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital@0;1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", serif;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+
+.container {
+  height: 100vh;
+}
+/* Code written by Vinay Mahendre */
+.left {
+  width: 25vw;
+  padding: 10px 10px 0px 10px;
+}
+
+.right {
+  width: 75vw;
+  margin: 13px 3px 0px 0px;
+}
+
+.logo {
+  width: 150px;
+  height: 35px;
+}
+
+.logo img {
+  width: 150px;
+  height: 35px;
+  background-color: #00fff7;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home {
+  min-height: 18vh;
+}
+
+.home ul li {
+  display: flex;
+  gap: 15px;
+  width: 15px;
+  list-style: none;
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+.home ul a {
+  color: white;
+}
+
+.heading {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  list-style: none;
+  align-items: center;
+  font-size: 13px;
+}
+/* Code written by Vinay Mahendre */
+.heading img {
+  width: 20px;
+}
+
+.library {
+  min-height: 75vh;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.heading .space {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.likedSongs {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  height: 53vh;
+  width: 23vw;
+  background-color: black;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding-top: 20px;
+  overflow-y: auto;
+  gap: 10px;
+}
+
+.likedSongs h4 {
+  color: gray;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 5px;
+  font-size: 10px;
+  color: gray;
+  gap: 13px;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0px;
+  height: 10vh;
+  width: 23vw;
+  margin-bottom: 10px;
+}
+
+.footer .copy {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer a {
+  color: gray;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.header > * {
+  padding: 20px;
+  height: 30px;
+}
+
+.main {
+  height: 85vh;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.category {
+  padding: 18px;
+  background-color: rgb(33, 33, 33);
+  height: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.card {
+  width: 177px;
+  height: 250px;
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  background-color: black;
+  position: relative;
+}
+
+.card .image {
+  width: 165px;
+  height: 165px;
+  margin: 6px;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 115px;
+  bottom: 50px;
+  color: rgb(255, 255, 255);
+  font-family: "roboto", sans-serif;
+  font-weight: 200;
+  background-color: black;
+  border-radius: 5px;
+  height: 30px;
+  width: 50px;
+  opacity: 0;
+}
+
+.card:hover .text {
+  size: 1rem;
+  opacity: 1;
+  transition: all 0.2s ease-out;
+  left: 115px;
+  bottom: 84px;
+}
+
+.card .inner-svg {
+  height: 120px;
+  width: 110px;
+  position: absolute;
+  right: -20px;
+  top: 135px;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.card h3 {
+  margin-left: 10px;
+  font-weight: 500;
+}
+.card p {
+  margin-left: 10px;
+  padding-top: 5px;
+  font-size: small;
+  color: gray;
+}
+
+.cate-play {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 70vh;
+  overflow-y: auto;
+  margin-top: 20px;
+  margin-left: 20px;
+  overflow-x: hidden;
+}
+
+.card:hover .inner-svg {
+  opacity: 1;
+  top: 120px;
+}
+.card:hover {
+  background-color: rgb(40, 40, 40);
+}
+/* Code written by Vinay Mahendre */
+.nav h3 {
+  font-weight: 600;
+  color: white;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.category h3 {
+  color: white;
+  font-weight: 600;
+}
+
+.category .arrbox img {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.category .arrbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 85px;
+  background-color: rgb(93, 93, 93);
+  border-radius: 10px;
+}
+
+.category .arrbox:hover {
+  background-color: black;
+  transition: all 0.4s ease-out;
+}
+
+.category .arrbox img:hover {
+  height: 22px;
+  width: 22px;
+  transition: all 0.4s ease-out;
+}
+
+.category .arrbox h4 {
+  cursor: pointer;
+}
+
+.category .arrbox h4:hover {
+  font-size: 1.01rem;
+}
+
+.backbtncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.songcard {
+  display: flex;
+  width: 100px;
+  height: 40px;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  width: 47vw;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.songcard strong {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
+.songcard:hover {
+  background-color: rgb(40, 40, 40);
+}
+
+.songs-container {
+  display: flex;
+  flex-direction: column;
+  width: 53vw;
+  margin-left: 20px;
+  overflow-y: auto;
+  margin: 10px 0px 10px 20px;
+  padding-left: 10px;
+  gap: 15px;
+  position: relative;
+  height: 68vh;
+}
+
+.songs-container p {
+  font-family: "Roboto", sans-serif;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+.whatbox {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 18vw;
+  background-color: rgb(30, 30, 30);
+  border-radius: 5px;
+  align-items: center;
+}
+
+.secpage {
+  display: flex;
+  margin: 20px 0px 0px 10px;
+  height: 74vh;
+  width: 72vw;
+}
+
+.songImg {
+  width: 40px;
+}
+
+.thirdpage {
+  display: flex;
+  flex-direction: column;
+  height: 71vh;
+  width: 53vw;
+  margin-left: 20px;
+  margin: 0px 0px 0px 20px;
+  gap: 15px;
+  justify-content: start;
+  align-items: center;
+}
+
+.playerbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(30, 30, 30);
+  border-radius: 5px;
+  height: 98%;
+  width: 53vw;
+}
+
+.liked {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Code written by Vinay Mahendre */
+  height: 30px;
+  width: 30px;
+  position: relative;
+  bottom: 115px;
+  cursor: pointer;
+}
+
+.liked:hover::after {
+  content: "Collect Fav Exp. in Your Library";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.clonedSongCard {
+  height: 30px;
+  width: 19vw;
+  background-color: rgb(31, 31, 31);
+}
+
+.clonedSongCard .bothbox strong {
+  font-family: "Roboto", sans-serif;
+  font-weight: 50;
+  font-size: 10px;
+}
+
+.clonedSongCard .bothbox img {
+  width: 35px;
+}
+
+.clonedSongCard .playAnimation {
+  height: 40px;
+  width: 100px;
+  opacity: 1;
+}
+
+.clonedSongCard .playAnimation .now.playing .bar {
+  display: inline-block;
+  position: relative;
+  margin-right: 1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #00fff7, #0258c8);
+  color: transparent;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  /* Code written by Vinay Mahendre */
+}
+
+.liked svg {
+  height: 30px;
+  width: 30px;
+}
+
+.imgbox {
+  display: flex;
+  justify-content: inherit;
+  align-items: center;
+  border-radius: 5px;
+  height: 50vh;
+  width: 90%;
+  background-color: black;
+}
+
+.imgbox img {
+  z-index: 1;
+  margin-left: 45px;
+}
+.playbox {
+  background-color: #121212;
+  height: 100px;
+  width: 90%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.image1 {
+  width: 250px;
+  height: 250px;
+}
+
+.leftplay {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+.play {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.rightplay {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+.inplaybox {
+  height: 100px;
+  width: 100px;
+}
+/* Code written by Vinay Mahendre */
+.pbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 46vw;
+}
+
+.songtime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00fff7;
+  background-color: black;
+  width: 100px;
+  border-radius: 5px;
+}
+.songname {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  color: #00fff7;
+  width: 100px;
+  height: 60px;
+  border-radius: 5px;
+}
+
+.songname h4 {
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+.ppbox {
+  display: flex;
+  width: 600px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.seekbar {
+  height: 2px;
+  width: 95%;
+  border: 1px solid #00fff7;
+  position: relative;
+  background-color: black;
+  cursor: pointer;
+}
+
+.seekbardiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  background-color: black;
+  position: absolute;
+  bottom: -7px;
+  left: -1%;
+  transition: left 0.5s;
+}
+
+.playAnimation {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100px;
+  height: 50px;
+
+  opacity: 0;
+  top: 0;
+}
+
+.clonedSongCard .playAnimation {
+  opacity: 0;
+}
+
+.playAnimation0 {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 6vw;
+  height: 50px;
+  opacity: 1;
+  position: absolute;
+  top: 122px;
+}
+
+.bothbox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 340px;
+  height: 55px;
+}
+
+.now.playing .bar {
+  display: inline-block;
+  position: relative;
+  margin-right: 1px;
+  width: 3px;
+  height: 1px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #00fff7, #0258c8);
+  color: transparent;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  border: 1px solid black;
+}
+
+.paused.playing .bar {
+  animation-iteration-count: 1;
+}
+.paused.playing:after {
+  content: "Paused (Lame)";
+}
+.n1 {
+  animation-delay: 0.5s;
+}
+.n2 {
+  animation-delay: 0.2s;
+}
+.n3 {
+  animation-delay: 1.2s;
+}
+.n4 {
+  animation-delay: 0.9s;
+}
+.n5 {
+  animation-delay: 2.3s;
+}
+.n6 {
+  animation-delay: 1.3s;
+}
+.n7 {
+  animation-delay: 3.1s;
+}
+.n8 {
+  animation-delay: 1.9s;
+}
+@keyframes pulse {
+  0% {
+    height: 1px;
+    margin-top: 0;
+  }
+  10% {
+    height: 20px;
+    margin-top: -40px;
+  }
+  50% {
+    height: 5px;
+    margin-top: -20px;
+  }
+  60% {
+    height: 10px;
+    margin-top: -30px;
+  }
+  80% {
+    height: 30px;
+    margin-top: -60px;
+  }
+  100% {
+    height: 1px;
+    margin-top: 0;
+  }
+}
+
+.butt-style {
+  height: 48px;
+  width: 108px;
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: black;
+  font-weight: 700;
+  background-color: #00fff7;
+  cursor: pointer;
+}
+
+.logom {
+  display: none;
+}
+
+.hum {
+  display: none;
+}
+
+.cloneplayAnimation {
+  position: absolute;
+  left: 25px;
+  top: 150px;
+}
+
+.close img {
+  display: none;
+}
+
+canvas {
+  bottom: -11px;
+  position: absolute;
+  right: 58px;
+  width: 31vw;
+  height: 60vh;
+  display: block;
+  border-radius: 50%;
+}
+
+.anni {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 48vh;
+  width: 39vw;
+  display: flex;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #1e1e1e;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  text-align: center;
+  position: relative;
+  overflow-y: auto;
+}
+/* Code written by Vinay Mahendre */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #00fff7;
+}
+
+a:hover {
+  color: #00fff7;
+}
+
+.popup1:hover {
+  color: #00fff7;
+}
+
+.popup1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content1 {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  background-color: #1e1e1e;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  text-align: center;
+  position: relative;
+
+  overflow-y: auto;
+}
+
+.close-btn1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn1:hover {
+  color: #00fff7;
+}
+
+@media (max-width: 1400px) {
+  .left {
+    position: absolute;
+    left: -142%;
+    transition: all 0.3s;
+    z-index: 2;
+    width: 500px;
+    height: 100vh;
+
+    padding: 3px 0px 0px 3px;
+  }
+
+  .home {
+    border: 1px solid #00fff7;
+  }
+
+  .library {
+    border: 1px solid #00fff7;
+    height: 76vh;
+  }
+
+  .likedSongs {
+    width: 477px;
+    height: 49vh;
+  }
+
+  .footer {
+    width: 477px;
+  }
+
+  .right {
+    margin: 3px 3px 0px 0px;
+    width: 100vw;
+    height: 101vh;
+  }
+
+  .secpage {
+    width: 97vw;
+    height: 74vh;
+  }
+
+  .songs-container {
+    width: 75vw;
+    margin-top: 25px;
+    height: 66vh;
+  }
+
+  .songcard {
+    width: 95%;
+  }
+
+  .whatbox {
+    width: 25vw;
+    height: 72vh;
+  }
+
+  .main {
+    margin-left: 3px;
+    height: 87vh;
+    margin-right: 3px;
+  }
+
+  .header {
+    margin-left: 3px;
+    display: flex;
+
+    align-items: center;
+    margin-right: 3px;
+  }
+
+  .thirdpage {
+    width: 70vw;
+  }
+  .playerbox {
+    width: 70vw;
+    height: 85vh;
+  }
+  /* Code written by Vinay Mahendre */
+  .songname {
+    display: flex;
+
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 6px;
+  }
+  .songname h4 {
+    font-size: 8px;
+  }
+
+  .logom {
+    display: flex;
+  }
+
+  .logom img {
+    width: 15vw;
+    height: 6vh;
+    border-radius: 5px;
+    position: relative;
+    margin-top: -5px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .imgbox {
+    justify-content: space-evenly;
+    height: 45vh;
+    width: 67vw;
+    margin-top: -74px;
+  }
+
+  .imgbox img {
+    height: 250px;
+    width: 250px;
+    z-index: 1;
+    margin-left: 100px;
+  }
+
+  .playAnimation0 {
+    width: 8vw;
+  }
+
+  .playbox {
+    height: 18vh;
+    width: 67vw;
+    margin-bottom: 20px;
+  }
+
+  .playerbox {
+    justify-content: end;
+    gap: 20px;
+  }
+
+  .pbox {
+    height: 12vh;
+    width: 62vw;
+  }
+
+  .ppbox {
+    height: 12vh;
+    width: 60vw;
+  }
+
+  .play {
+    height: 85px;
+    width: 85px;
+  }
+
+  .rightplay {
+    height: 70px;
+    width: 70px;
+  }
+
+  .leftplay {
+    height: 70px;
+    width: 70px;
+  }
+
+  .songname {
+    width: 12vw;
+    height: 12vh;
+  }
+
+  .songname h4 {
+    font-size: 11px;
+  }
+
+  .liked svg {
+    margin-left: -70px;
+  }
+
+  .hum {
+    display: flex;
+    height: 40px;
+    width: 40px;
+  }
+
+  .close img {
+    display: flex;
+    position: relative;
+    height: 50px;
+    width: 50px;
+  }
+
+  .con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .liked:hover::after {
+    content: none;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .clonedSongCard {
+    height: 30px;
+    width: 410px;
+    background-color: rgb(31, 31, 31);
+  }
+
+  .container {
+    height: 101vh;
+  }
+
+  canvas {
+    bottom: -14px;
+    position: absolute;
+    right: -44px;
+    width: 38vw;
+    height: 72vh;
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 950px) {
+  .songname h4 {
+    font-size: 6px;
+  }
+
+  .liked svg {
+    margin-left: -100px;
+  }
+
+  .imgbox img {
+    margin-left: 220px;
+    height: 230px;
+    width: 230px;
+  }
+
+  .imgbox {
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .songtime {
+    font-size: 9px;
+  }
+
+  .playAnimation0 {
+    width: 14vw;
+  }
+
+  .playerbox {
+    width: 68vw;
+  }
+
+  canvas {
+    bottom: -10px;
+    position: absolute;
+    right: -147px;
+    width: 45vw;
+    height: 62vh;
+    display: block;
+    border-radius: 50%;
+  }
+}
+/* Code written by Vinay Mahendre */
+@media (max-width: 850px) {
+  .imgbox img {
+    height: 220px;
+    width: 220px;
+  }
+
+  canvas {
+    bottom: -10px;
+    position: absolute;
+    right: -122px;
+    width: 45vw;
+    height: 62vh;
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  .butt-style {
+    height: 30px;
+    width: 60px;
+    font-size: 13px;
+  }
+
+  .space h3 {
+    font-size: 13px;
+  }
+  .category .arrbox {
+    width: 50px;
+    height: 30px;
+  }
+  .category .arrbox h4 {
+    font-size: 9px;
+  }
+
+  .category .arrbox img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .card {
+    width: 145px;
+    height: 215px;
+  }
+  /* Code written by Vinay Mahendre */
+  .card .image {
+    width: 135px;
+    height: 135px;
+  }
+
+  .card h3 {
+    font-size: 13px;
+  }
+  .card p {
+    font-size: 11px;
+  }
+
+  .playAnimation0 {
+    top: 92px;
+  }
+
+  .songcard strong {
+    font-size: 10px;
+  }
+
+  .songImg {
+    width: 30px;
+  }
+
+  .leftplay {
+    width: 40px;
+    height: 40px;
+  }
+
+  .rightplay {
+    width: 40px;
+    height: 40px;
+  }
+  .play {
+    width: 70px;
+    height: 70px;
+  }
+  .ppbox {
+    height: 91px;
+  }
+  .imgbox img {
+    margin-left: 177px;
+    width: 200px;
+    height: 200px;
+  }
+  .liked svg {
+    height: 20px;
+    width: 20px;
+  }
+
+  .cloneplayAnimation {
+    position: absolute;
+    left: 19px;
+    top: 122px;
+  }
+
+  .whatbox {
+    height: 70vh;
+  }
+
+  .songs-container {
+    width: 65vw;
+    margin-top: 25px;
+    height: 63vh;
+  }
+
+  .secpage {
+    height: 73vh;
+  }
+
+  .thirdpage {
+    height: 70vh;
+  }
+
+  .songname {
+    height: 14vh;
+  }
+
+  .playerbox {
+    height: 76vh;
+  }
+
+  .main {
+    height: 87vh;
+  }
+
+  canvas {
+    bottom: -4px;
+    position: absolute;
+    right: -134px;
+    width: 53vw;
+    height: 61vh;
+    display: block;
+    border-radius: 50%;
+  }
+
+  .playbox {
+    height: 20vh;
+    width: 67vw;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 660px) {
+  .main {
+    height: 87vh;
+  }
+
+  .library {
+    height: 76vh;
+  }
+
+  #disclaimerModal div {
+    width: 67vw;
+    height: 50vh;
+  }
+
+  .right {
+    margin: 3px 3px 0px 0px;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 620px) {
+  .secpage {
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .secpage .whatbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98vw;
+    height: 10vh;
+    margin-left: -7px;
+    margin-top: -12px;
+  }
+
+  .popup-content1 {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background-color: #1e1e1e;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    text-align: center;
+    position: relative;
+    left: -6%;
+    overflow-y: auto;
+  }
+
+  .likedSongs {
+    width: 477px;
+    height: 63vh;
+  }
+  /* Code written by Vinay Mahendre */
+  .playbox {
+    height: 27vh;
+    width: 93vw;
+    margin-bottom: 6px;
+  }
+
+  .backcardclone {
+    display: flex;
+
+    align-items: center;
+    width: 97vw;
+    height: 50px;
+  }
+  .backcardclone .image {
+    width: 40px;
+    height: 40px;
+    margin-left: 90px;
+  }
+  .backcardclone .inner-svg {
+    top: -19px;
+    opacity: 0;
+    height: 80px;
+    display: none;
+  }
+
+  .playAnimation0 {
+    top: -4px;
+    left: 400px;
+  }
+
+  .songs-container {
+    width: 93vw;
+    margin: 25px 0px 0px 1px;
+    height: 73vh;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 103vh;
+  }
+
+  .text {
+    left: 18px;
+    bottom: 11px;
+    opacity: 1;
+  }
+  /* Code written by Vinay Mahendre */
+  .playerbox {
+    display: flex;
+    margin-top: 15px;
+    width: 95vw;
+    height: 77vh;
+    justify-content: normal;
+    gap: 10px;
+  }
+
+  .thirdpage {
+    width: 95vw;
+    margin: 0px 0px 0px 0px;
+    height: 80vh;
+  }
+
+  .space {
+    width: 91vw;
+    margin-top: 5px;
+  }
+
+  .imgbox {
+    width: 92vw;
+    height: 48vh;
+    margin-top: 8px;
+  }
+
+  .imgbox img {
+    position: relative;
+    right: -78px;
+    width: 40vw;
+    height: 26vh;
+  }
+
+  .liked svg {
+    position: absolute;
+    margin-top: 96px;
+    right: 71px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .playerbox {
+    display: flex;
+    margin-top: 8px;
+    width: 95vw;
+    height: 79vh;
+    justify-content: normal;
+    gap: 10px;
+  }
+
+  .seekbar {
+    margin-top: 10px;
+  }
+  .ppbox {
+    width: 88vw;
+    height: 17vh;
+  }
+
+  .pbox {
+    display: flex;
+    flex-direction: column;
+    width: 89vw;
+    height: 19vh;
+  }
+
+  .songname {
+    height: 45px;
+    width: 87vw;
+  }
+
+  .songtime {
+    width: 88vw;
+    height: 46px;
+  }
+
+  .play {
+    width: 70px;
+    height: 70px;
+  }
+
+  .rightplay {
+    width: 50px;
+    height: 50px;
+  }
+
+  .leftplay {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .logom {
+    display: flex;
+  }
+
+  .logom img {
+    width: 170px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 0px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .hum {
+    display: flex;
+  }
+
+  .backcardclone p {
+    display: none;
+  }
+
+  .backcardclone h3 {
+    display: none;
+  }
+
+  .backcardclone {
+    position: relative;
+  }
+
+  .songcard {
+    width: 92%;
+  }
+
+  .cate-play {
+    height: 80vh;
+  }
+
+  .clonedSongCard {
+    height: 30px;
+    width: 68vw;
+    background-color: rgb(31, 31, 31);
+  }
+
+  canvas {
+    bottom: 19px;
+    position: absolute;
+    right: -206px;
+    width: 53vw;
+    height: 49vh;
+    display: block;
+    border-radius: 50%;
+  }
+
+  .container {
+    height: 117vh;
+  }
+
+  .right {
+    margin: 3px 3px 0px 0px;
+    width: 100vw;
+    height: 117vh;
+  }
+
+  .library {
+    height: 92vh;
+  }
+}
+
+@media (max-width: 520px) {
+  .left {
+    width: 94vw;
+  }
+  /* Code written by Vinay Mahendre */
+  .likedSongs {
+    width: 90vw;
+    height: 62vh;
+  }
+
+  .footer {
+    width: 90vw;
+  }
+
+  .library {
+    height: 83vh;
+  }
+
+  .right {
+    height: 104vh;
+  }
+}
+
+@media (max-width: 530px) {
+  .playAnimation0 {
+    position: absolute;
+    left: 350px;
+  }
+
+  .playAnimation0 {
+    width: 16vw;
+  }
+
+  .imgbox img {
+    right: -55px;
+    width: 54vw;
+    height: 30vh;
+  }
+  .imgbox svg {
+    margin-top: 64px;
+    right: 50px;
+  }
+
+  .library {
+    height: 91vh;
+  }
+
+  .left {
+    height: 109vw;
+  }
+
+  .home {
+    height: 21vh;
+  }
+
+  .playerbox {
+    height: 77vh;
+  }
+
+  .thirdpage {
+    height: 80vh;
+  }
+
+  canvas {
+    bottom: 8px;
+    position: absolute;
+    right: -215px;
+    width: 67vw;
+    height: 54vh;
+    display: block;
+    border-radius: 50%;
+  }
+  /* Code written by Vinay Mahendre */
+  .pbox {
+    display: flex;
+    flex-direction: column;
+    width: 89vw;
+    height: 19vh;
+  }
+
+  .playbox {
+    margin-bottom: 5px;
+    display: flex;
+    width: 92vw;
+    height: 25vh;
+    justify-content: right;
+  }
+
+  .popup-content {
+    background-color: #1e1e1e;
+    width: 73vw;
+    height: 37vh;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    text-align: center;
+    position: relative;
+    overflow-y: auto;
+  }
+
+  .popup-content1 {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background-color: #1e1e1e;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    text-align: center;
+    position: relative;
+    left: -4%;
+    margin-left: 15px;
+    margin-right: 25px;
+    overflow-y: auto;
+  }
+
+  #disclaimerModal div {
+    width: 67vw;
+    height: 56vh;
+  }
+
+  .secpage {
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .imgbox img {
+    right: -36px;
+    width: 50vw;
+    height: 26vh;
+  }
+
+  canvas {
+    bottom: 23px;
+    position: absolute;
+    right: -185px;
+    width: 66vw;
+    height: 52vh;
+    display: block;
+    border-radius: 50%;
+  }
+
+  #disclaimerModal div {
+    width: 67vw;
+    height: 62vh;
+  }
+}
+
+@media (max-width: 460px) {
+  .playAnimation0 {
+    position: absolute;
+    left: 250px;
+    width: 20vw;
+  }
+
+  .butt-style {
+    height: 25px;
+    width: 48px;
+    font-size: 13px;
+  }
+
+  .buttons {
+    position: absolute;
+    right: 2px;
+  }
+
+  .logom img {
+    left: -115px;
+  }
+  .space {
+    width: 89vw;
+  }
+
+  .backcardclone {
+    width: 96vw;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+  .imgbox svg {
+    margin-top: 97px;
+    right: 111px;
+  }
+
+  .playerbox {
+    height: 79vh;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 103vh;
+  }
+
+  .imgbox {
+    width: 92vw;
+    height: 44vh;
+    margin-top: 8px;
+  }
+
+  .thirdpage {
+    height: 82vh;
+  }
+
+  .library {
+    height: 91vh;
+  }
+
+  .imgbox svg {
+    margin-top: 22px;
+    right: 30px;
+  }
+
+  .playbox {
+    margin-bottom: 5px;
+    display: flex;
+    width: 92vw;
+    height: 32vh;
+    justify-content: right;
+  }
+
+  .pbox {
+    display: flex;
+    flex-direction: column;
+    width: 89vw;
+    height: 27vh;
+  }
+  /* Code written by Vinay Mahendre */
+  canvas {
+    bottom: 23px;
+    position: absolute;
+    right: -199px;
+    width: 74vw;
+    height: 46vh;
+    display: block;
+    border-radius: 50%;
+  }
+
+  .songs-container p {
+    font-family: "Roboto", sans-serif;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+  }
+
+  #disclaimerModal div {
+    width: 67vw;
+    height: 65vh;
+  }
+
+  .right {
+    height: 117vh;
+  }
+}
+
+@media (max-width: 420px) {
+  .library {
+    height: 91vh;
+  }
+
+  canvas {
+    bottom: 22px;
+    position: absolute;
+    right: -187px;
+    width: 78vw;
+    height: 49vh;
+    display: block;
+    border-radius: 50%;
+  }
+
+  .imgbox img {
+    right: -23px;
+    width: 59vw;
+    height: 26vh;
+  }
+}
+
+@media (max-width: 390px) {
+  canvas {
+    bottom: 28px;
+    position: absolute;
+    right: -182px;
+    width: 81vw;
+    height: 45vh;
+    display: block;
+    border-radius: 50%;
+  }
+  /* Code written by Vinay Mahendre */
+  #disclaimerModal div {
+    width: 67vw;
+    height: 71vh;
+  }
+
+  .right {
+    height: 115vh;
+  }
+
+  .space {
+    width: 87vw;
+  }
+
+  .main {
+    margin-top: 3px;
+  }
+
+  .songs-container {
+    width: 93vw;
+    margin: 11px 0px 0px -5px;
+    height: 75vh;
+  }
+
+  .library {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 360px) {
+  .playAnimation0 {
+    left: 195px;
+    width: 25vw;
+  }
+
+  .logom img {
+    left: -96px;
+    left: -113px;
+    width: 38vw;
+  }
+
+  .playAnimation {
+    width: 169px;
+  }
+
+  .imgbox svg {
+    margin-top: 17px;
+    right: 21px;
+    width: 21px;
+  }
+
+  .likedSongs {
+    width: 87vw;
+    height: 51vh;
+  }
+
+  .logo img {
+    width: 126px;
+    height: 30px;
+  }
+
+  .close img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .hum {
+    position: relative;
+    top: 5px;
+  }
+
+  .hum img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .left {
+    height: 109vh;
+  }
+
+  .home {
+    height: 23vh;
+  }
+
+  .footer {
+    width: 88vw;
+  }
+
+  .pbox {
+    display: flex;
+    flex-direction: column;
+    width: 89vw;
+    height: 26vh;
+  }
+
+  .playbox {
+    margin-bottom: 5px;
+    display: flex;
+    width: 92vw;
+    height: 31vh;
+    justify-content: right;
+  }
+
+  .thirdpage {
+    height: 80vh;
+  }
+
+  .playerbox {
+    height: 79vh;
+  }
+  /* Code written by Vinay Mahendre */
+  .library {
+    height: 88vh;
+  }
+
+  .songs-container {
+    width: 93vw;
+    margin: 11px 0px 0px -5px;
+    height: 76vh;
+  }
+
+  .imgbox img {
+    height: 24vh;
+    width: 64vw;
+    right: -11px;
+  }
+
+  canvas {
+    bottom: 35px;
+    position: absolute;
+    right: -165px;
+    width: 81vw;
+    height: 46vh;
+    display: block;
+    border-radius: 50%;
+  }
+  .secpage {
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right {
+    height: 116vh;
+  }
+
+  .container {
+    height: 117vh;
+  }
+
+  #disclaimerModal div {
+    width: 67vw;
+    height: 77vh;
+  }
+}
+
+@media (max-width: 320px) {
+  canvas {
+    bottom: 35px;
+    position: absolute;
+    right: -153px;
+    width: 81vw;
+    height: 46vh;
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 300px) {
+  .imgbox img {
+    height: 21vh;
+    width: 66vw;
+    right: 7px;
+  }
+
+  canvas {
+    bottom: 29px;
+    position: absolute;
+    right: -137px;
+    width: 79vw;
+    height: 43vh;
+    display: block;
+    border-radius: 50%;
+  }
+
+  #disclaimerModal div {
+    width: 67vw;
+    height: 85vh;
+  }
+}
+/* Code written by Vinay Mahendre */

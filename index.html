@@ -1,0 +1,273 @@
+<!-- 
+  Project: SoundWave Music Player
+  Author: Vinay Mahendre
+  Date: 2025
+  Description: A simple music player web app.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundWave</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="shortcut icon" href="ico/fav.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container flex bg-black">
+      <div class="left">
+        <div class="home bg-grey rounded p-1">
+          <div class="con">
+            <div class="logo">
+              <a href=""><img src="Svg/logo.svg" alt="logo" /></a>
+            </div>
+            <div class="close">
+              <img src="Svg/close.svg" alt="close" />
+            </div>
+          </div>
+          <ul>
+            <a class="ac" style="text-decoration: none" href=""
+              ><li><img src="Svg/home.svg" alt="home" />Home</li></a
+            >
+            <a style="text-decoration: none" href=""
+              ><li><img src="Svg/search.svg" alt="search" />Search</li></a
+            >
+          </ul>
+        </div>
+        <div class="library bg-grey rounded m-11 p-1">
+          <!-- Code written by Vinay Mahendre -->
+          <div class="heading">
+            <img src="Svg/library.svg" alt="library" />
+            <h2 class="space">Your Library</h2>
+          </div>
+          <div class="likedSongs"><h4>No Experience Collected</h4></div>
+          <div class="footer">
+            <div class="copy">
+              <a href="#" class="popup3">
+                <span>About-Us</span>
+              </a>
+              <p>&copy; 2025 Vinay Mahendre. All rights reserved.</p>
+            </div>
+
+            <div id="popup" class="popup">
+              <!-- Code written by Vinay Mahendre -->
+              <div class="popup-content">
+                <span id="closePopup" class="close-btn">&times;</span>
+                <h2>About Us</h2>
+                <p>
+                  01010011 01101111 01110101 01101110 01100100 01010111 01100001
+                  01110110 01100101 00100000 01101001 01110011 00100000 01100001
+                  00100000 01110011 01101001 01101101 01110000 01101100 01100101
+                  00100000 01101101 01110101 01110011 01101001 01100011 00100000
+                  01110000 01101100 01100001 01111001 01100101 01110010 00100000
+                  01110111 01100101 01100010 00100000 01100001 01110000 01110000
+                  00100000 01100011 01110010 01100101 01100001 01110100 01100101
+                  01100100 00100000 01100010 01111001 00100000 01010110 01101001
+                  01101110 01100001 01111001 00100000 01001101 01100001 01101000
+                  01100101 01101110 01100100 01110010 01100101 00101110 00100000
+                  01001001 01110100 00100000 01100110 01100101 01100001 01110100
+                  01110101 01110010 01100101 01110011 00100000 01100011 01100001
+                  01110100 01100101 01100111 01101111 01110010 01101001 01100101
+                  01110011 00100000 01100001 01101110 01100100 00100000 01110011
+                  01101111 01101110 01100111 01110011 00100000 01110100 01100001
+                  01101001 01101100 01101111 01110010 01100101 01100100 00100000
+                  01110100 01101111 00100000 01101101 01100001 01110100 01100011
+                  01101000 00100000 01111001 01101111 01110101 01110010 00100000
+                  01101101 01101111 01101111 01100100 00101110 00100000 01011001
+                  01101111 01110101 00100000 01100011 01100001 01101110 00100000
+                  01110011 01100101 01101100 01100101 01100011 01110100 00100000
+                  01111001 01101111 01110101 01110010 00100000 01100110 01100001
+                  01110110 01101111 01110010 01101001 01110100 01100101 00100000
+                  01100011 01100001 01110100 01100101 01100111 01101111 01110010
+                  01111001 00100000 01100001 01101110 01100100 00100000 01100101
+                  01101110 01101010 01101111 01111001 00100000 01101001 01110100
+                  01110011 00100000 01110011 01101111 01101110 01100111 01110011
+                  00101110 00100000 01010011 01101111 01110101 01101110 01100100
+                  01010111 01100001 01110110 01100101 00100000 01110111 01100001
+                  01110011 00100000 01100100 01100101 01110110 01100101 01101100
+                  01101111 01110000 01100101 01100100 00100000 01100010 01111001
+                  <!-- Code written by Vinay Mahendre -->
+                  00100000 01101001 01101110 01100011 01101111 01110010 01110000
+                  01101111 01110010 01100001 01110100 01101001 01101110 01100111
+                  00100000 01010110 01101001 01101110 01100001 01111001 00100111
+                  01110011 00100000 01110000 01100101 01110010 01110011 01101111
+                  01101110 01100001 01101100 00100000 01101101 01110101 01110011
+                  01101001 01100011 00100000 01101100 01101001 01110011 01110100
+                  01100101 01101110 01101001 01101110 01100111 00100000 01100101
+                  01111000 01110000 01100101 01110010 01101001 01100101 01101110
+                  01100011 01100101 00100000 01100001 01101110 01100100 00100000
+                  01100110 01100101 01100101 01101100 01101001 01101110 01100111
+                  01110011 00101110 00100000 01010100 01101000 01100101 00100000
+                  01100011 01101000 01100001 01110010 01100001 01100011 01110100
+                  01100101 01110010 00100000 01100110 01100101 01100001 01110100
+                  01110101 01110010 01100101 01100100 00100000 01101001 01101110
+                  00100000 01110100 01101000 01101001 01110011 00100000 01101101
+                  01110101 01110011 01101001 01100011 00100000 01110000 01101100
+                  01100001 01111001 01100101 01110010 00100000 01110010 01100101
+                  01110000 01110010 01100101 01110011 01100101 01101110 01110100
+                  01110011 00100000 01010110 01101001 01101110 01100001 01111001
+                  00100111 01110011 00100000 01100101 01101110 01110110 01101001
+                  01110011 01101001 01101111 01101110 01100101 01100100 00100000
+                  01100110 01110101 01110100 01110101 01110010 01100101 00100000
+                  01110011 01100101 01101100 01100110 00101110 00100000 01000001
+                  01101110 01100100 00100000 01111001 01100101 01110011 00101100
+                  00100000 01100100 01101111 01101110 00011001 01110100 00100000
+                  01110100 01100001 01101011 01100101 00100000 01110100 01101000
+                  01101001 01110011 00100000 01101101 01110101 01110011 01101001
+                  01100011 00100000 01110000 01101100 01100001 01111001 01100101
+                  01110010 00100000 01110100 01101111 01101111 00100000 01110011
+                  01100101 01110010 01101001 01101111 01110101 01110011 01101100
+                  01111001 00010100 01101010 01110101 01110011 01110100 00100000
+                  01100101 01101110 01101010 01101111 01111001 00100000 01101001
+                  01110100 00100001
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right bg-black">
+        <div class="header bg-grey rounded">
+          <!-- Code written by Vinay Mahendre -->
+          <div class="hum">
+            <img src="Svg/hum.svg" alt="hum" />
+          </div>
+          <div class="logom">
+            <img src="Svg/logom.svg" alt="logom" />
+          </div>
+          <div class="nav space">
+            <h3>SoundWave is No.1 Real Experience Platform</h3>
+          </div>
+
+          <div class="buttons">
+            <button class="butt-style">Signup</button>
+            <button class="butt-style butt">Login</button>
+          </div>
+
+          <div id="popup1" class="popup1">
+            <div class="popup-content1">
+              <span id="closePopup1" class="close-btn1">&times;</span>
+              <!-- Code written by Vinay Mahendre -->
+              <h2>Not Required To Create & Login Account</h2>
+              <p>
+                You don't need to create an account for now. Until then, enjoy
+                it for free—this feature is coming soon!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="main bg-grey rounded">
+          <div class="category space rounded">
+            <h3>Experience category</h3>
+          </div>
+
+          <div class="cate-play">
+            <div
+              class="card"
+              id="cardno1"
+              data-category="Motivation"
+              class="bg-black rounded space"
+            >
+              <img class="inner-svg" src="Svg/inner.svg" alt="inner-logo" />
+              <img class="rounded image" src="img/1.png" alt="img1" />
+              <h3>Motivation Era</h3>
+              <p>Escape The Matrix</p>
+            </div>
+            <div
+              class="card"
+              id="cardno2"
+              data-category="Money"
+              class="bg-black rounded space"
+            >
+              <img class="inner-svg" src="Svg/inner.svg" alt="inner-logo" />
+              <img class="rounded image" src="img/3.png" alt="img1" />
+              <h3>Money Era</h3>
+              <!-- Code written by Vinay Mahendre -->
+              <p>Escape The Matrix</p>
+            </div>
+            <div
+              class="card"
+              id="cardno3"
+              data-category="Sad"
+              class="bg-black rounded space"
+            >
+              <img class="inner-svg" src="Svg/inner.svg" alt="inner-logo" />
+              <img class="rounded image" src="img/6.png" alt="img1" />
+              <h3>Sad Era</h3>
+              <p>Escape The Matrix</p>
+            </div>
+            <div
+              class="card"
+              id="cardno4"
+              data-category="FunkWin"
+              class="bg-black rounded space"
+            >
+              <img class="inner-svg" src="Svg/inner.svg" alt="inner-logo" />
+              <img class="rounded image" src="img/11.png" alt="img1" />
+              <h3>Funk Win Era</h3>
+              <p>Escape The Matrix</p>
+            </div>
+            <div
+              class="card"
+              id="cardno5"
+              data-category="Success"
+              class="bg-black rounded space"
+            >
+              <img class="inner-svg" src="Svg/inner.svg" alt="inner-logo" />
+              <img class="rounded image" src="img/2.png" alt="img1" />
+              <h3>Success Era</h3>
+              <!-- Code written by Vinay Mahendre -->
+              <p>Escape The Matrix</p>
+            </div>
+            <div
+              class="card"
+              id="cardno6"
+              data-category="Monster"
+              class="bg-black rounded space"
+            >
+              <img class="inner-svg" src="Svg/inner.svg" alt="inner-logo" />
+              <!-- Code written by Vinay Mahendre -->
+              <img class="rounded image" src="img/5.png" alt="img1" />
+              <h3>Monster Era</h3>
+              <p>Escape The Matrix</p>
+            </div>
+            <div
+              class="card"
+              id="cardno7"
+              data-category="Hero"
+              class="bg-black rounded space"
+            >
+              <img class="inner-svg" src="Svg/inner.svg" alt="inner-logo" />
+              <img class="rounded image" src="img/8.png" alt="img1" />
+              <h3>Hero Era</h3>
+              <p>Escape The Matrix</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="disclaimerModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); color: white; display: flex; align-items: center; justify-content: center; z-index: 9999; font-family: 'Poppins', sans-serif;">
+      <div style="text-align: center; max-width: 500px; padding: 20px; background: #222; border-radius: 10px;">
+        <h2 style="margin-bottom: 20px;">Welcome to SoundWave Reality</h2>
+        <p style="margin-bottom: 20px;">
+          This music player, SoundWave, is created by <strong style="color:#00fff7;">Vinay Mahendre</strong> for educational and personal portfolio purposes. 
+          <!-- Code written by Vinay Mahendre --> 
+          The songs used in this project are copyrighted and belong to their respective owners.  
+          This project is non-commercial and is intended to showcase web development skills only.
+        </p>
+        <p style="margin-bottom: 20px;">
+          You are free to use this music player to listen to songs only.  
+          Any usage other than playing songs or using this player as intended is strictly prohibited.
+          <h3>Listen to music and feel your future before it happens.</h3>
+        </p>
+        <button onclick="closeDisclaimer()" 
+                style="margin-top: 20px; padding: 10px 20px; border: none; background: #555; color: white; cursor: pointer; border-radius: 5px; transition: background-color 0.3s;">
+          I Understand
+        </button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    <!-- Code written by Vinay Mahendre -->
+  </body>
+</html>
