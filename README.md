@@ -30,7 +30,6 @@ Using a local object to manage song data simplifies the setup and avoids the com
 - ⏩ Go to the next song.
 - ⏪ Return to the previous song.
 - ❤️ Collect and manage your favorite songs in the library.
-- 🎚 Adjust the volume for a perfect listening experience.
 
 ---
 
