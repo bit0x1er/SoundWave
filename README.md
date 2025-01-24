@@ -108,7 +108,7 @@ Thank you for exploring **SoundWave**. Dive into the beats, enjoy the rhythm, an
 ---
 
 ## 🌐 Live Demo
-Want to try SoundWave? [Check it out here](#)!
+Want to try SoundWave? [Check it out here](https://vinaymahendre.github.io/SoundWave/)!
 
 ---
 
