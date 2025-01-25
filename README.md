@@ -33,6 +33,12 @@ Using a local object to manage song data simplifies the setup and avoids the com
 
 ---
 
+## 🛠️ Technologies Used
+**HTML5, CSS3, JavaScript**: For core structure, styling, and functionality.
+**Object Data Structure**: To manage song details (titles, paths, and images) efficiently.
+
+---
+
 ## 📂 Repository Structure
 ```
 / SoundWave
