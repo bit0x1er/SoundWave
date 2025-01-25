@@ -41,9 +41,11 @@ Using a local object to manage song data simplifies the setup and avoids the com
 
 ## ScreenShots
 
-![2](https://github.com/user-attachments/assets/ef8f9931-2c0b-41ef-9680-1c4406d4b6bc)
-![3](https://github.com/user-attachments/assets/33026213-99d1-4924-869d-538fd9c8f0c6)
-![1](https://github.com/user-attachments/assets/261eb724-1769-4a3b-b0e4-02f64cb8d1df)
+- ![2](https://github.com/user-attachments/assets/ef8f9931-2c0b-41ef-9680-1c4406d4b6bc)
+  
+- ![3](https://github.com/user-attachments/assets/33026213-99d1-4924-869d-538fd9c8f0c6)
+  
+- ![1](https://github.com/user-attachments/assets/261eb724-1769-4a3b-b0e4-02f64cb8d1df)
 
 ---
 
